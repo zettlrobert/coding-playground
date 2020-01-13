@@ -8,20 +8,14 @@
 // "Success"  => ")())())"
 // "(( @"     => "))((" 
 
-
 const input = process.argv[2];
-
 
 const duplicateEncoder = word => {
   word = input.toLowerCase();
-
-
   // keep count of all letters
   let letterCount = {}
-
   // array of individual letters
   let letters = word.split('');
-
   // Array for Symbol Output
   let output = []
 
@@ -40,12 +34,20 @@ const duplicateEncoder = word => {
   });
 
 
-  console.log(letterCount);
-  console.log(letters);
+  // console.log(letterCount);
+  // console.log(letters);
 
   console.log(output.join(''));
 
 }
+
+
+
+
+
+
+
+
 
 
 // function duplicateEncode(word) {
