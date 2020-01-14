@@ -35,3 +35,14 @@ const spinningWords = sentence => {
 }
 
 spinningWords();
+
+
+
+
+
+// Optimal Solution
+// function spinWords(words) {
+//   return words.split(' ').map(word => {
+//     return (word.length > 4) ? word.split('').reverse().join('') : word;
+//   }).join(' ');
+// }
