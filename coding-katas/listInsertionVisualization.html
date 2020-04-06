@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>List Insertion</title>
+</head>
+
+<body>
+  <h2>My List</h2>
+  <ul class="list">
+  </ul>
+
+  <div>
+    <input id="new-item" type="text" value="">
+    <button class="insert">Insert</button>
+  </div>
+</body>
+
+<script>
+  let $list = document.querySelector(".list");
+  let input = document.getElementById("new-item");
+  let $button = document.querySelector(".insert");
+
+
+  $button.addEventListener('click', () => {
+    let value = input.value
+    if (value === "") {
+      value = null
+    }
+
+    console.log(value);
+    if (value !== null) {
+      console.log(value)
+      console.log("clicked")
+      $list.appendChild(document.createElement("li")).append(value)
+      input.value = '';
+    } else {
+      return
+    }
+  })
+</script>
+
+<style>
+  li:nth-child(3n) {
+    color: red;
+  }
+</style>
+
+</html>
